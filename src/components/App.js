@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../assets/logo.svg';
 import '../assets/App.css';
 import Header from './Header';
 import Main from './Main';
@@ -26,7 +25,7 @@ class App extends Component {
     return (
       <div>
         <Header loadSamples={this.loadSamples}/>
-        <Main />
+        <Main notes={this.state.notes} />
       </div>
     )
   }

@@ -4,13 +4,21 @@ import Home from './Home';
 import NoteDetail from './NoteDetail';
 // import '../assets/Main.css';
 
-const Main = () => (
-  <main>
-    <Switch>
-      <Route exact path='/' component={Home}/>
-      <Route path='/note/:id' component={NoteDetail}/>
-    </Switch>
-  </main>
-)
+
+// note: We are copying all of the props sent to main into Home
+class Main extends Component {
+  render() {
+    return (
+      <main>
+        <Switch>
+          <Route exact path='/' render={() => (
+            <Home {...this.props} />
+          )}/>
+          <Route path='/note/:id' component={NoteDetail}/>
+        </Switch>
+      </main>
+    )
+  }
+}
 
 export default Main;
