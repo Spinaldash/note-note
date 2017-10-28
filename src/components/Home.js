@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NoteCard from './NoteCard'
 // import '../assets/Home.css';
 
 class Home extends Component {
@@ -13,10 +14,7 @@ class Home extends Component {
       return
     }
     return (
-      <li key={key}>
-        <span><h3>{note.title}</h3></span>
-        <span>{note.description}</span>
-      </li>
+      <NoteCard key={key} note={note}></NoteCard>
     )
   }
 
