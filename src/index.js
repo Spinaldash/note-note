@@ -5,10 +5,5 @@ import { BrowserRouter } from 'react-router-dom';
 import './assets/index.css';
 import App from './components/App';
 
-ReactDOM.render((
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-
-), document.getElementById('root'));
+ReactDOM.render((<App />), document.getElementById('root'));
 registerServiceWorker();

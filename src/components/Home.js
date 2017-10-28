@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NoteCard from './NoteCard'
+import Popup from './Popup'
 // import '../assets/Home.css';
 
 class Home extends Component {
@@ -22,6 +23,9 @@ class Home extends Component {
     const noteIds = Object.keys(this.props.notes)
     return (
       <div>
+        <Popup addNote={this.props.addNote} show={this.props.showModal}
+          closeModal={this.props.closeModal}>
+        </Popup>
         <h2>Home Note Hub</h2>
         <ul className="note-index">
           {noteIds.map(this.renderNotes)}

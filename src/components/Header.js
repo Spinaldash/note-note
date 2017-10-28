@@ -8,7 +8,7 @@ class Header extends Component {
         <nav className='bar'>
           <button className="add-samples mj-button" onClick={this.props.loadSamples}>Add Samples</button>
           <h3>Note-note App</h3>
-          <button className="add-note mj-button">Add Note</button>
+          <button className="add-note mj-button" onClick={this.props.openModal}>Add Note</button>
         </nav>
       </div>
     )
