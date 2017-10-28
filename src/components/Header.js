@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import logo from '../assets/logo.svg';
 import '../assets/Header.css';
 
-const Header = () => (
-  <div>
-    <nav className='bar'>
-      <div class="icon icon-1"></div>
-      <h3>Note-note App</h3>
-      <button className="add-button">Add Note</button>
-    </nav>
-  </div>
-)
+class Header extends Component {
+  render() {
+    return (
+      <div>
+        <nav className='bar'>
+          <button className="add-samples mj-button" onClick={this.props.loadSamples}>Add Samples</button>
+          <h3>Note-note App</h3>
+          <button className="add-note mj-button">Add Note</button>
+        </nav>
+      </div>
+    )
+  }
+}
 
 export default Header;

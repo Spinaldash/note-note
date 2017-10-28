@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../assets/logo.svg';
 import { Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import NoteDetail from './NoteDetail';
