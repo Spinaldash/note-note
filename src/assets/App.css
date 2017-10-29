@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .note-container {
@@ -38,4 +39,47 @@
 
 .card-bar span:hover {
   opacity: 0.5;
+}
+
+form textarea {
+  resize: none;
+}
+
+.custom-radios div {
+  display: inline-block;
+}
+.custom-radios input[type="radio"] {
+  display: none;
+}
+
+.custom-radios input[type="radio"] + label span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 15%;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  text-align: center;
+}
+
+.custom-radios input[type="radio"]:checked + label span {
+  border: 1.5px ridge #000000;
+}
+
+.custom-radios input[type="radio"]#colorChoice1 + label span {
+  background-color: #e74c3c;
+}
+.custom-radios input[type="radio"]#colorChoice2 + label span {
+  background-color: #2ecc71;
+}
+.custom-radios input[type="radio"]#colorChoice3 + label span {
+  background-color: #dbb108;
+}
+.custom-radios input[type="radio"]#colorChoice4 + label span {
+  background-color: #3498db;
+}
+.custom-radios input[type="radio"]:checked + label span img {
+  opacity: 1;
 }

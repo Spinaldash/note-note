@@ -11,13 +11,11 @@ class App extends Component {
         showModal: false,
         notes: {},
       };
-
       this.addNote = this.addNote.bind(this);
       this.removeNote = this.removeNote.bind(this);
       this.loadSamples = this.loadSamples.bind(this);
       this.openModal = this.openModal.bind(this);
       this.closeModal = this.closeModal.bind(this);
-
     }
   addNote(note) {
     const notes = {...this.state.notes};
@@ -28,8 +26,6 @@ class App extends Component {
 
   removeNote(noteKey) {
     const notes = { ...this.state.notes}
-    console.log('These are notes: ', notes);
-    console.log('notekey: ', noteKey);
     if (notes[noteKey]) {
       delete notes[noteKey]
     } else {
