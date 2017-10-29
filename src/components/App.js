@@ -54,7 +54,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='app'>
         <Header loadSamples={this.loadSamples} openModal={this.openModal}/>
         <Home removeNote={this.removeNote} addNote={this.addNote} showModal={this.state.showModal} closeModal={this.closeModal} notes={this.state.notes} />
       </div>

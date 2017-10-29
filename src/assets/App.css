@@ -1,6 +1,19 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
   font-family: 'Roboto', sans-serif;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #110303;
+  color: rgb(143, 17, 28);
+  padding: 5px;
 }
 
 .note-container {
@@ -40,9 +53,19 @@
 .card-bar span:hover {
   opacity: 0.5;
 }
+input:focus {
+  outline: 0
+}
+
+textarea:focus {
+  outline: 0
+}
 
 form textarea {
+  font-size: 13px;
   resize: none;
+  border: 0;
+  width: 100%
 }
 
 .custom-radios div {
@@ -65,7 +88,7 @@ form textarea {
 }
 
 .custom-radios input[type="radio"]:checked + label span {
-  border: 1.5px ridge #000000;
+  border: 1.5px outset #aab1b5;
 }
 
 .custom-radios input[type="radio"]#colorChoice1 + label span {
@@ -82,4 +105,48 @@ form textarea {
 }
 .custom-radios input[type="radio"]:checked + label span img {
   opacity: 1;
+}
+
+.MJButton {
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 12px;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.gray {
+  color: white;
+  background-color: gray;
+}
+
+.teal {
+  color: white;
+  background-color: #66c4cc;
+}
+
+#title-input {
+  margin: 10px 0 10px 0;
+  border: 0px;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.footer-background {
+  width: 100%;
+  height: 80px;
+  background-color: #FAFAFA;
+  position: absolute;
+  border-radius: 0 0 5px 5px;
+  bottom: 0;
+  left: 0;
+}
+
+.footer {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }

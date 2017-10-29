@@ -8,6 +8,8 @@ class Popup extends React.Component {
       return null;
     }
 
+    const highlightColor = this.props.color ? this.props.color :'#e74c3c';
+
     // The gray background
     const backdropStyle = {
       position: 'fixed',
@@ -26,19 +28,35 @@ class Popup extends React.Component {
       maxWidth: 500,
       minHeight: 300,
       margin: '0 auto',
-      padding: 30
+      padding: '30px 30px 80px 30px',
+      position: 'relative'
     };
+
+    const highlightStyle = {
+      position: 'absolute',
+      borderRadius: '5px 5px 0 0',
+      top: 0,
+      left: 0,
+      height: '10px',
+      width: '100%',
+      backgroundColor: highlightColor
+    };
+
+    const footerStyle = {
+      position: 'absolute',
+      borderRadius: '0 0 5px 5px',
+      bottom: 0,
+      left: 0,
+      height: '',
+      width: '100%',
+      backgroundColor: '#a19999'
+    }
 
     return (
       <div className="backdrop" style={backdropStyle}>
         <div className="modal" style={modalStyle}>
+          <div className='highlight' style={highlightStyle}></div>
           <AddNoteForm closeModal={this.props.closeModal} addNote={this.props.addNote}/>
-
-          <div className="footer">
-            <button onClick={this.props.closeModal}>
-              Close
-            </button>
-          </div>
         </div>
       </div>
     );

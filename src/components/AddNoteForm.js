@@ -36,9 +36,18 @@ class AddNoteForm extends Component {
              <label htmlFor="colorChoice4"><span></span></label>
           </div>
         </div>
-        <input ref={(input) => this.title = input} type="text" placeholder="Untitled" required/>
-        <textarea ref={(input) => this.description = input} placeholder="Just start typing here" cols="60" rows="30" required></textarea>
-        <button type="submit">+ Add Note</button>
+        <div>
+          <input ref={(input) => this.title = input} id="title-input" type="text" placeholder="Untitled" autoFocus required/>
+        </div>
+
+        <textarea ref={(input) => this.description = input} placeholder="Just start typing here" cols="60" rows="25" required></textarea>
+        <div className="footer-background">
+          <div className="footer">
+            <button className="MJButton gray" onClick={this.props.closeModal}>Cancel</button>
+            <button className="MJButton teal" type="submit">Add</button>
+          </div>
+        </div>
+
       </form>
     )
   }
