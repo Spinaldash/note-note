@@ -24,7 +24,7 @@ class NoteCard extends Component {
           <div><span className="card-title">{this.props.note.title}</span></div>
           <div className="icons">
             <span className="icon-edit">E</span>
-            <span onClick={() => {this.props.removeNote(this.props.noteId)}} className="icon-delete">X</span>
+            <span className="icon-delete" onClick={() => {this.props.openConfirm(this.props.noteId)}}>X</span>
           </div>
         </div>
         <div className="card-desc">

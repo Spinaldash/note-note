@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NoteCard from './NoteCard'
 import Popup from './Popup'
+import ConfirmModal from './ConfirmModal'
 // import '../assets/Home.css';
 
 class Home extends Component {
@@ -16,7 +17,7 @@ class Home extends Component {
       return
     }
     return (
-      <NoteCard removeNote={this.props.removeNote} key={key} noteId={key} note={note}></NoteCard>
+      <NoteCard openConfirm={this.props.openConfirm} showConfirm={this.props.showConfirm} removeNote={this.props.removeNote} key={key} noteId={key} note={note}></NoteCard>
     )
   }
 
@@ -25,8 +26,8 @@ class Home extends Component {
     return (
       <div>
         <Popup addNote={this.props.addNote} show={this.props.showModal}
-          closeModal={this.props.closeModal}>
-        </Popup>
+          closeModal={this.props.closeModal}></Popup>
+        <ConfirmModal confirmId={this.props.confirmId} removeNote={this.props.removeNote} show={this.props.showConfirm} closeConfirm={this.props.closeConfirm}></ConfirmModal>
         <ul className="note-container">
           {noteKeys.map(this.renderNotes)}
         </ul>

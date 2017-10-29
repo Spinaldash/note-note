@@ -8,14 +8,18 @@ class App extends Component {
   constructor() {
       super();
       this.state = {
+        showConfirm: false,
         showModal: false,
+        confirmId: null,
         notes: {},
       };
       this.addNote = this.addNote.bind(this);
       this.removeNote = this.removeNote.bind(this);
       this.loadSamples = this.loadSamples.bind(this);
       this.openModal = this.openModal.bind(this);
+      this.openConfirm = this.openConfirm.bind(this);
       this.closeModal = this.closeModal.bind(this);
+      this.closeConfirm = this.closeConfirm.bind(this);
     }
   addNote(note) {
     const notes = {...this.state.notes};
@@ -40,10 +44,23 @@ class App extends Component {
     });
   }
 
+  openConfirm(id) {
+    this.setState({
+      showConfirm: true,
+      confirmId: id
+    })
+  }
+
   closeModal() {
     this.setState({
       showModal: false
     });
+  }
+
+  closeConfirm() {
+    this.setState({
+      showConfirm: false
+    })
   }
 
   loadSamples() {
@@ -56,7 +73,7 @@ class App extends Component {
     return (
       <div className='app'>
         <Header loadSamples={this.loadSamples} openModal={this.openModal}/>
-        <Home removeNote={this.removeNote} addNote={this.addNote} showModal={this.state.showModal} closeModal={this.closeModal} notes={this.state.notes} />
+        <Home confirmId={this.state.confirmId} removeNote={this.removeNote} addNote={this.addNote} showConfirm={this.state.showConfirm} openConfirm={this.openConfirm} showModal={this.state.showModal} closeModal={this.closeModal} notes={this.state.notes} closeConfirm={this.closeConfirm}/>
       </div>
     )
   }
