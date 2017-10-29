@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class AddFishForm extends Component {
+class AddNoteForm extends Component {
   createNote(event) {
     event.preventDefault();
     const note = {
@@ -28,4 +28,4 @@ class AddFishForm extends Component {
   }
 }
 
-export default AddFishForm;
+export default AddNoteForm;

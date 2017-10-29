@@ -8,6 +8,7 @@ class Home extends Component {
     super();
     this.renderNotes = this.renderNotes.bind(this);
   }
+
   renderNotes(key) {
     const note = this.props.notes[key]
     if (!note) {
@@ -15,20 +16,20 @@ class Home extends Component {
       return
     }
     return (
-      <NoteCard key={key} note={note}></NoteCard>
+      <NoteCard removeNote={this.props.removeNote} key={key} noteId={key} note={note}></NoteCard>
     )
   }
 
   render() {
-    const noteIds = Object.keys(this.props.notes)
+    const noteKeys = Object.keys(this.props.notes)
     return (
       <div>
         <Popup addNote={this.props.addNote} show={this.props.showModal}
           closeModal={this.props.closeModal}>
         </Popup>
         <h2>Home Note Hub</h2>
-        <ul className="note-index">
-          {noteIds.map(this.renderNotes)}
+        <ul className="note-container">
+          {noteKeys.map(this.renderNotes)}
         </ul>
       </div>
     )

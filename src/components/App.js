@@ -13,17 +13,29 @@ class App extends Component {
       };
 
       this.addNote = this.addNote.bind(this);
+      this.removeNote = this.removeNote.bind(this);
       this.loadSamples = this.loadSamples.bind(this);
       this.openModal = this.openModal.bind(this);
       this.closeModal = this.closeModal.bind(this);
 
     }
   addNote(note) {
-    console.log('This is the note:', note);
     const notes = {...this.state.notes};
     const timestamp = Date.now();
     notes[`note${timestamp}`] = note
     this.setState({ notes });
+  }
+
+  removeNote(noteKey) {
+    const notes = { ...this.state.notes}
+    console.log('These are notes: ', notes);
+    console.log('notekey: ', noteKey);
+    if (notes[noteKey]) {
+      delete notes[noteKey]
+    } else {
+      console.error('Tried to delete a not that does not exsist, key: ', noteKey);
+    }
+    this.setState({ notes })
   }
 
   openModal() {
@@ -48,7 +60,7 @@ class App extends Component {
     return (
       <div>
         <Header loadSamples={this.loadSamples} openModal={this.openModal}/>
-        <Home addNote={this.addNote} showModal={this.state.showModal} closeModal={this.closeModal} notes={this.state.notes} />
+        <Home removeNote={this.removeNote} addNote={this.addNote} showModal={this.state.showModal} closeModal={this.closeModal} notes={this.state.notes} />
       </div>
     )
   }
