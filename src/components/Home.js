@@ -27,7 +27,6 @@ class Home extends Component {
         <Popup addNote={this.props.addNote} show={this.props.showModal}
           closeModal={this.props.closeModal}>
         </Popup>
-        <h2>Home Note Hub</h2>
         <ul className="note-container">
           {noteKeys.map(this.renderNotes)}
         </ul>

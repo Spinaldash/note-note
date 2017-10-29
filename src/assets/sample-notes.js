@@ -3,42 +3,42 @@ module.exports = {
   note1000: {
     title: 'Grocery List',
     description: 'Bananas Rasberries Milk Cookies',
-    color: 'rgb(214, 136, 63)',
+    color: '#e74c3c',
   },
   note1001: {
     title: 'Another Example Note',
     description: 'Bananas Rasberries Milk Cookies',
-    color: 'rgb(214, 136, 63)',
+    color: '#2ecc71',
   },
   note1003: {
     title: 'Things to do in SF',
     description: 'Bananas Rasberries Milk Cookies',
-    color: 'rgb(214, 136, 63)',
+    color: '#dbb108',
   },
   note1004: {
     title: 'Meeting Notes',
-    description: 'Bananas Rasberries Milk Cookies',
-    color: 'rgb(214, 136, 63)',
+    description: 'Bananas \n Rasberries Milk Cookies',
+    color: '#3498db',
   },
   note1005: {
     title: 'Grocery List',
     description: 'Bananas Rasberries Milk Cookies',
-    color: 'rgb(214, 136, 63)',
+    color: '#e74c3c',
   },
   note1006: {
-    title: 'Another Example Note',
-    description: 'Bananas Rasberries Milk Cookies',
-    color: 'rgb(214, 136, 63)',
+    title: 'Portland',
+    description: '7:00 - 8:45 Flight to Portland\n8:45 - 9:15 Transportation to Embassy\n9:15 - 9:30 Drop of bags at Embassy\n9:30 - 10:15 Check out Stumptown\n10:30 - 12:00 Brunch @ Mothers\n12:00 - 7:00 Free Time\n8:00 - 9:30 Dinner @ Pok Pok\n9:30 - Dranks',
+    color: '#2ecc71',
   },
   note1007: {
     title: 'Things to do in SF',
     description: 'Bananas Rasberries Milk Cookies',
-    color: 'rgb(214, 136, 63)',
+    color: '#dbb108',
   },
   note1008: {
     title: 'Meeting Notes',
     description: 'Bananas Rasberries Milk Cookies',
-    color: 'rgb(214, 136, 63)',
+    color: '#3498db',
   }
 
 

@@ -19,21 +19,21 @@ class AddNoteForm extends Component {
       <form ref={(input) => this.noteForm = input} onSubmit={(e) => this.createNote(e)} >
         <div className="custom-radios">
           <div>
-            <input type="radio" id="colorChoice1"
-             name="color" value="red" />
-             <label htmlFor="colorChoice1"><span></span></label>
+            <input type="radio" id="colorChoiceRed"
+             name="color" value="#e74c3c" />
+             <label htmlFor="colorChoiceRed"><span></span></label>
 
-            <input type="radio" id="colorChoice2"
-             name="color" value="green" />
-             <label htmlFor="colorChoice2"><span></span></label>
+            <input type="radio" id="colorChoiceGreen"
+             name="color" value="#2ecc71" />
+             <label htmlFor="colorChoiceGreen"><span></span></label>
 
-            <input type="radio" id="colorChoice3"
-             name="color" value="yellow" />
-             <label htmlFor="colorChoice3"><span></span></label>
+            <input type="radio" id="colorChoiceYellow"
+             name="color" value="#dbb108" />
+             <label htmlFor="colorChoiceYellow"><span></span></label>
 
-            <input type="radio" id="colorChoice4"
-             name="color" value="blue" defaultChecked/>
-             <label htmlFor="colorChoice4"><span></span></label>
+            <input type="radio" id="colorChoiceBlue"
+             name="color" value="#3498db" defaultChecked/>
+             <label htmlFor="colorChoiceBlue"><span></span></label>
           </div>
         </div>
         <div>

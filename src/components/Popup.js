@@ -12,6 +12,7 @@ class Popup extends React.Component {
 
     // The gray background
     const backdropStyle = {
+      zIndex: 50,
       position: 'fixed',
       top: 0,
       bottom: 0,
@@ -23,6 +24,7 @@ class Popup extends React.Component {
 
     // The modal "window"
     const modalStyle = {
+      zIndex: 60,
       backgroundColor: '#fff',
       borderRadius: 5,
       maxWidth: 500,

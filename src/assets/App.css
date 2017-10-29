@@ -26,33 +26,47 @@ body {
 }
 
 .note-card {
+  z-index: 1;
+  position: relative;
   width: 20%;
   height: 200px;
   border: 1px solid black;
+  border-radius: 5px;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
+  font-size: 12px;
 }
 
 .card-bar {
   list-style: none;
   margin: 0;
-  background: deepskyblue;
+  padding: 15px 10px 10px 10px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   -webkit-flex-flow: row wrap;
+  font-size: 16px;
+  border-bottom: 1px solid #ebebf4;
 }
 
 .card-bar span {
   text-decoration: none;
-  display: block;
   padding: .2em;
-  color: white;
+  color: black;
 }
 
 .card-bar span:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
+
+.card-title {
+  padding-right: 10px;
+}
+.card-desc {
+  padding: 10px;
+}
+
 input:focus {
   outline: 0
 }
@@ -91,16 +105,16 @@ form textarea {
   border: 1.5px outset #aab1b5;
 }
 
-.custom-radios input[type="radio"]#colorChoice1 + label span {
+.custom-radios input[type="radio"]#colorChoiceRed + label span {
   background-color: #e74c3c;
 }
-.custom-radios input[type="radio"]#colorChoice2 + label span {
+.custom-radios input[type="radio"]#colorChoiceGreen + label span {
   background-color: #2ecc71;
 }
-.custom-radios input[type="radio"]#colorChoice3 + label span {
+.custom-radios input[type="radio"]#colorChoiceYellow + label span {
   background-color: #dbb108;
 }
-.custom-radios input[type="radio"]#colorChoice4 + label span {
+.custom-radios input[type="radio"]#colorChoiceBlue + label span {
   background-color: #3498db;
 }
 .custom-radios input[type="radio"]:checked + label span img {
@@ -114,6 +128,10 @@ form textarea {
   font-size: 12px;
   border: 0;
   font-family: 'Roboto', sans-serif;
+}
+
+.MJButton:hover {
+  cursor: pointer;
 }
 
 .gray {

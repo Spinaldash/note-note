@@ -1,15 +1,35 @@
 import React, { Component } from 'react';
 
 class NoteCard extends Component {
+
   render() {
+
+    const highlightColor = this.props.note.color ? this.props.note.color :'#e74c3c';
+
+    const highlightStyle = {
+      position: 'absolute',
+      borderRadius: '5px 5px 0 0',
+      top: 0,
+      left: 0,
+      height: '5px',
+      width: '100%',
+      backgroundColor: highlightColor
+    };
+
+
     return(
       <span className="note-card">
-        <ul className="card-bar">
-          <li><span className="icon-edit">E</span></li>
-          <li><span onClick={() => {this.props.removeNote(this.props.noteId)}} className="icon-delete">X</span></li>
-        </ul>
-        <span><h3>{this.props.note.title}</h3></span>
-        <span>{this.props.note.description}</span>
+        <div className='highlight' style={highlightStyle}></div>
+        <div className="card-bar">
+          <div><span className="card-title">{this.props.note.title}</span></div>
+          <div className="icons">
+            <span className="icon-edit">E</span>
+            <span onClick={() => {this.props.removeNote(this.props.noteId)}} className="icon-delete">X</span>
+          </div>
+        </div>
+        <div className="card-desc">
+          <span>{this.props.note.description}</span>
+        </div>
       </span>
     )
   }
