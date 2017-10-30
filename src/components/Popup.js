@@ -48,16 +48,6 @@ class Popup extends React.Component {
       backgroundColor: highlightColor
     };
 
-    const footerStyle = {
-      position: 'absolute',
-      borderRadius: '0 0 5px 5px',
-      bottom: 0,
-      left: 0,
-      height: '',
-      width: '100%',
-      backgroundColor: '#a19999'
-    }
-
     return (
       <div className="backdrop" style={backdropStyle}>
         <div className="modal" style={modalStyle}>

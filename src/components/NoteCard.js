@@ -22,9 +22,9 @@ class NoteCard extends Component {
         <div className='highlight' style={highlightStyle}></div>
         <div className="card-bar">
           <div><span className="card-title">{this.props.note.title}</span></div>
-          <div className="icons">
-            <span className="icon-edit" onClick={() => {this.props.openModal(this.props.noteId)}}>E</span>
-            <span className="icon-delete" onClick={() => {this.props.openConfirm(this.props.noteId)}}>X</span>
+          <div>
+            <span onClick={() => {this.props.openModal(this.props.noteId)}}><i className="material-icons icon">mode_edit</i></span>
+            <span onClick={() => {this.props.openConfirm(this.props.noteId)}}><i className="material-icons icon">delete</i></span>
           </div>
         </div>
         <div className="card-desc">

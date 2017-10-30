@@ -27,7 +27,7 @@ module.exports = {
   },
   note1006: {
     title: 'Portland',
-    description: '7:00 - 8:45 Flight to Portland\n8:45 - 9:15 Transportation to Embassy\n9:15 - 9:30 Drop of bags at Embassy\n9:30 - 10:15 Check out Stumptown\n1',
+    description: '7:00 - 8:45 Flight to Portland\n8:45 - 9:15 Transportation to Embassy\n9:15 - 9:30 Drop of bags at Embassy\n9:30 - 10:15 Check out Stumptown\n10:30 - 12:00 Brunch @ Mothers\n12:00 - 7:00 Free Time\n8:00 - 9:30 Dinner @ Pok Pok\n9:30 - Dranks',
     color: '#2ecc71',
   },
   note1007: {

@@ -11,8 +11,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #110303;
-  color: rgb(143, 17, 28);
+  background-color: #1f2532;
+  color: #dbb108;
   padding: 5px;
 }
 
@@ -28,14 +28,15 @@ body {
 .note-card {
   z-index: 1;
   position: relative;
-  width: 20%;
-  height: 200px;
+  width: 22%;
+  height: 220px;
   border: 1px solid black;
   border-radius: 5px;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
   font-size: 12px;
+  box-shadow: 2px 2px 5px;
 }
 
 .card-bar {
@@ -44,14 +45,15 @@ body {
   padding: 15px 10px 10px 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   -webkit-flex-flow: row wrap;
-  font-size: 16px;
+  font-size: 18px;
   border-bottom: 1px solid #ebebf4;
 }
 
 .card-bar span {
   text-decoration: none;
-  padding: .2em;
+
   color: black;
 }
 
@@ -62,9 +64,11 @@ body {
 
 .card-title {
   padding-right: 10px;
+  font-size: 16px;
 }
 .card-desc {
   padding: 10px;
+  white-space: pre-wrap;
 }
 
 input:focus {
@@ -167,4 +171,8 @@ form textarea {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.icon {
+  font-size: 20px
 }
