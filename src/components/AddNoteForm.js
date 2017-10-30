@@ -70,7 +70,7 @@ class AddNoteForm extends Component {
           </div>
         </div>
         <div>
-          <input ref={(input) => this.title = input} id="title-input" type="text" placeholder="Untitled" defaultValue={title} autoFocus required/>
+          <input ref={(input) => this.title = input} id="title-input" type="text" placeholder="Untitled" defaultValue={title} size='50' autoFocus required/>
         </div>
 
         <textarea ref={(input) => this.description = input} placeholder="Just start typing here" cols="60" rows="25" defaultValue={description} required></textarea>
