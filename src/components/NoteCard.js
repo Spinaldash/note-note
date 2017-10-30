@@ -23,7 +23,7 @@ class NoteCard extends Component {
         <div className="card-bar">
           <div><span className="card-title">{this.props.note.title}</span></div>
           <div className="icons">
-            { /* <span className="icon-edit">E</span> */ }
+            <span className="icon-edit" onClick={() => {this.props.openModal(this.props.noteId)}}>E</span>
             <span className="icon-delete" onClick={() => {this.props.openConfirm(this.props.noteId)}}>X</span>
           </div>
         </div>

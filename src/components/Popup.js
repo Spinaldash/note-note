@@ -8,7 +8,11 @@ class Popup extends React.Component {
       return null;
     }
 
-    const highlightColor = this.props.color ? this.props.color :'#e74c3c';
+    let highlightColor = this.props.color ? this.props.color :'#e74c3c';
+
+    if(this.props.editNoteId) {
+      highlightColor = this.props.editNoteId.color
+    }
 
     // The gray background
     const backdropStyle = {
@@ -58,7 +62,7 @@ class Popup extends React.Component {
       <div className="backdrop" style={backdropStyle}>
         <div className="modal" style={modalStyle}>
           <div className='highlight' style={highlightStyle}></div>
-          <AddNoteForm closeModal={this.props.closeModal} addNote={this.props.addNote}/>
+          <AddNoteForm editNote={this.props.editNote} closeModal={this.props.closeModal} addNote={this.props.addNote}/>
         </div>
       </div>
     );

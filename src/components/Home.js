@@ -17,7 +17,7 @@ class Home extends Component {
       return
     }
     return (
-      <NoteCard openConfirm={this.props.openConfirm} showConfirm={this.props.showConfirm} removeNote={this.props.removeNote} key={key} noteId={key} note={note}></NoteCard>
+      <NoteCard openConfirm={this.props.openConfirm} showConfirm={this.props.showConfirm} removeNote={this.props.removeNote} openModal={this.props.openModal} key={key} noteId={key} note={note}></NoteCard>
     )
   }
 
@@ -25,7 +25,7 @@ class Home extends Component {
     const noteKeys = Object.keys(this.props.notes)
     return (
       <div>
-        <Popup addNote={this.props.addNote} show={this.props.showModal}
+        <Popup editNote={this.props.editNote} addNote={this.props.addNote} show={this.props.showModal}
           closeModal={this.props.closeModal}></Popup>
         <ConfirmModal confirmId={this.props.confirmId} removeNote={this.props.removeNote} show={this.props.showConfirm} closeConfirm={this.props.closeConfirm}></ConfirmModal>
         <ul className="note-container">

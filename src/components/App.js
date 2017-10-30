@@ -8,6 +8,7 @@ class App extends Component {
   constructor() {
       super();
       this.state = {
+        editNote: null,
         showConfirm: false,
         showModal: false,
         confirmId: null,
@@ -23,8 +24,14 @@ class App extends Component {
     }
   addNote(note) {
     const notes = {...this.state.notes};
-    const timestamp = Date.now();
-    notes[`note${timestamp}`] = note
+    // If the note comes bundled with an ID this is an edit of an exsisting note
+    if(note.id) {
+      notes[note.id] = note
+    } else {
+      const timestamp = Date.now();
+      notes[`note${timestamp}`] = note
+    }
+
     this.setState({ notes });
   }
 
@@ -38,8 +45,17 @@ class App extends Component {
     this.setState({ notes })
   }
 
-  openModal() {
+  openModal(editNoteKey = null) {
+    // If an ID is given, find the note and add it to state
+    let editNote = null;
+    if(editNoteKey) {
+      editNote = this.state.notes[editNoteKey]
+      editNote.id = editNoteKey
+    }
+
+
     this.setState({
+      editNote: editNote,
       showModal: true
     });
   }
@@ -73,7 +89,10 @@ class App extends Component {
     return (
       <div className='app'>
         <Header loadSamples={this.loadSamples} openModal={this.openModal}/>
-        <Home confirmId={this.state.confirmId} removeNote={this.removeNote} addNote={this.addNote} showConfirm={this.state.showConfirm} openConfirm={this.openConfirm} showModal={this.state.showModal} closeModal={this.closeModal} notes={this.state.notes} closeConfirm={this.closeConfirm}/>
+        <Home confirmId={this.state.confirmId} removeNote={this.removeNote} addNote={this.addNote}
+          showConfirm={this.state.showConfirm} openConfirm={this.openConfirm} showModal={this.state.showModal}
+          openModal={this.openModal} closeModal={this.closeModal} notes={this.state.notes}
+          editNote={this.state.editNote} closeConfirm={this.closeConfirm}/>
       </div>
     )
   }
