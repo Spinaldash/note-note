@@ -53,11 +53,10 @@ body {
 
 .card-bar span {
   text-decoration: none;
-
   color: black;
 }
 
-.card-bar span:hover {
+.icon:hover {
   opacity: 0.5;
   cursor: pointer;
 }
