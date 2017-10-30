@@ -9,7 +9,7 @@ class AddNoteForm extends Component {
       description: this.description.value,
       color: this.noteForm.color.value
     }
-    
+
     if(this.props.editNote) {
       note.id = this.props.editNote.id
     }
@@ -22,9 +22,11 @@ class AddNoteForm extends Component {
 
   render(){
     let [red, yellow, blue, green] = [false, false, false, false];
+    let confirmButton = 'Add';
     const title = this.props.editNote ? this.props.editNote.title : ""
     const description = this.props.editNote ? this.props.editNote.description : ""
     if(this.props.editNote) {
+      confirmButton = 'Save';
       const color = this.props.editNote.color;
       // This seem ineffecient - noting to replace later
       switch(color) {
@@ -75,7 +77,7 @@ class AddNoteForm extends Component {
         <div className="footer-background">
           <div className="footer">
             <button className="MJButton gray" onClick={this.props.closeModal}>Cancel</button>
-            <button className="MJButton teal" type="submit">Add</button>
+            <button className="MJButton teal" type="submit">{confirmButton}</button>
           </div>
         </div>
 
