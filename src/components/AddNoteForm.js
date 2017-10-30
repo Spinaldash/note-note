@@ -40,7 +40,7 @@ class AddNoteForm extends Component {
           yellow = true;
           break;
         case "#3498db":
-          blue = true;
+          red = true;
           break;
         default:
           break;
