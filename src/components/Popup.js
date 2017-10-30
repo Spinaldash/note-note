@@ -10,8 +10,8 @@ class Popup extends React.Component {
 
     let highlightColor = this.props.color ? this.props.color :'#e74c3c';
 
-    if(this.props.editNoteId) {
-      highlightColor = this.props.editNoteId.color
+    if(this.props.editNote) {
+      highlightColor = this.props.editNote.color
     }
 
     // The gray background

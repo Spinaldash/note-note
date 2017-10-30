@@ -52,8 +52,6 @@ class App extends Component {
       editNote = this.state.notes[editNoteKey]
       editNote.id = editNoteKey
     }
-
-
     this.setState({
       editNote: editNote,
       showModal: true
