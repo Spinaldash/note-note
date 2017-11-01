@@ -1,5 +1,10 @@
-What's cool about Note-note
+Welcome to Note-note
 
-1) Everything is made from scratch - This is built off of create-react-app. Everything (Modals, custom radio buttons, cards, all styling) is made from scratch.
+This is an app I built from scratch off of a design document.
+It was an opportunity to flex my React Skills & CSS tricks.
 
-2) 
+It was built using only creat-react-app and normalize css.
+
+It's current form is hosted here:
+
+<a href="https://note-note-opedrjjkuf.now.sh">Note-Note</a>.
