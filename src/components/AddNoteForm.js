@@ -10,6 +10,7 @@ class AddNoteForm extends Component {
       color: this.noteForm.color.value
     }
 
+    // If it's an edit we send an id to identify which note to change
     if(this.props.editNote) {
       note.id = this.props.editNote.id
     }
@@ -19,53 +20,45 @@ class AddNoteForm extends Component {
     this.props.closeModal();
   }
 
-
-  render(){
-    let [red, yellow, blue, green] = [false, false, false, false];
-    let confirmButton = 'Add';
-    const title = this.props.editNote ? this.props.editNote.title : ""
-    const description = this.props.editNote ? this.props.editNote.description : ""
+  amIDefault(color) {
     if(this.props.editNote) {
-      confirmButton = 'Save';
-      const color = this.props.editNote.color;
-      // This seem ineffecient - noting to replace later
-      switch(color) {
-        case "#e74c3c":
-          red = true;
-          break;
-        case "#2ecc71":
-          green = true;
-          break;
-        case "#dbb108":
-          yellow = true;
-          break;
-        case "#3498db":
-          red = true;
-          break;
-        default:
-          break;
+      if(color === this.props.editNote.color) {
+        return true
       }
     } else {
-      blue = true;
+      // setting default to red
+      if(color === "#e74c3c") {
+        return true
+      }
     }
+    return false
+  }
+
+  render(){
+
+    // Setting defaults for the form if called in an edit
+    let confirmButton = this.props.editNote ? 'Save' : 'Add';
+    const title = this.props.editNote ? this.props.editNote.title : ""
+    const description = this.props.editNote ? this.props.editNote.description : ""
+
     return(
       <form ref={(input) => this.noteForm = input} onSubmit={(e) => this.createNote(e)} >
         <div className="custom-radios">
           <div>
             <input type="radio" id="colorChoiceRed"
-             name="color" value="#e74c3c" defaultChecked={red}/>
+             name="color" value="#e74c3c" defaultChecked={this.amIDefault('#e74c3c')}/>
              <label htmlFor="colorChoiceRed"><span></span></label>
 
             <input type="radio" id="colorChoiceGreen"
-             name="color" value="#2ecc71" defaultChecked={green}/>
+             name="color" value="#2ecc71" defaultChecked={this.amIDefault('#2ecc71')}/>
              <label htmlFor="colorChoiceGreen"><span></span></label>
 
             <input type="radio" id="colorChoiceYellow"
-             name="color" value="#dbb108" defaultChecked={yellow}/>
+             name="color" value="#dbb108" defaultChecked={this.amIDefault('#dbb108')}/>
              <label htmlFor="colorChoiceYellow"><span></span></label>
 
             <input type="radio" id="colorChoiceBlue"
-             name="color" value="#3498db" defaultChecked={blue}/>
+             name="color" value="#3498db" defaultChecked={this.amIDefault('#3498db')  }/>
              <label htmlFor="colorChoiceBlue"><span></span></label>
           </div>
         </div>

@@ -36,14 +36,14 @@ body {
   position: relative;
   width: 22%;
   height: 220px;
-  border: 1px solid black;
   border-radius: 5px;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
   font-size: 12px;
-  box-shadow: 2px 2px 5px;
+  box-shadow: 0px 0px 5px;
   background-color: white;
+  overflow: scroll;
 }
 
 .card-bar {
@@ -107,12 +107,12 @@ form textarea {
   vertical-align: middle;
   cursor: pointer;
   border-radius: 15%;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.33);
   text-align: center;
 }
 
 .custom-radios input[type="radio"]:checked + label span {
-  border: 1.5px outset #aab1b5;
+  border: 1.5px solid #aab1b5;
 }
 
 .custom-radios input[type="radio"]#colorChoiceRed + label span {
