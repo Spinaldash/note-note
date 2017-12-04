@@ -7,4 +7,4 @@ It was built using only creat-react-app and normalize css.
 
 It's current form is hosted here:
 
-<a href="https://note-note-lvcugamzqq.now.sh">Note-Note</a>.
+<a href="https://note-note-bwmfxcwead.now.sh">Note-Note</a>.
